@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jan Ken Po</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
     <main class="game--zone">
 
-        <header class="banner">
 
-            <img src="/assets/img/logo-bonus.svg" class="logo">
+      <header class="banner">
+        <img src="/assets/img/logo.svg" class="logo" />
 
-            <div class="score">
-                <h2 class="title-score">Score</h2>
-                <span class="counter-score">10</span>
+        <div class="score">
+          <h2 class="title-score">Score</h2>
+          <span class="counter-score">10</span>
+        </div>
+      </header>
+
+      <section class="container-game">
+
+        <div class="game-zone">
+
+          <!-- Paper -->
+          <div class="cotainer-actions">
+            <div class="outer-papel-circle">
+              <div class="inner-circle">
+                <img src="./assets/img/icon-paper.svg" />
+              </div>
             </div>
-        </header>
+          </div>
 
-        <div class="container-game">
+          <!-- Scissors -->
+          <div class="cotainer-actions">
+            <div class="outer-scissors-circle">
+              <div class="inner-circle">
+                <img src="./assets/img/icon-scissors.svg" />
+              </div>
+            </div>
+          </div>
 
         </div>
 
+        <!-- Rock -->
+        <div class="cotainer-paper-actions">
+            <div class="outer-rock-circle">
+                <div class="inner-circle">
+                    <img src="./assets/img/icon-rock.svg" />
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <div class="buttons">
+        <button class="button-rules">Rules</button>
+    </div>
+        
     </main>
-</body>
+  </body>
 </html>
