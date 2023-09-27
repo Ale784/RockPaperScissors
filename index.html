@@ -1,64 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jan Ken Po</title>
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-  </head>
-  <body>
-    <main class="game--zone">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jan Ken Po</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
 
-      <header class="banner">
-        <img src="/assets/img/logo.svg" class="logo" />
+<body>
+  <main class="game--zone">
 
-        <div class="score">
-          <h2 class="title-score">Score</h2>
-          <span class="counter-score">10</span>
-        </div>
-      </header>
+    <header class="banner">
+      <img src="/assets/img/logo.svg" class="logo" />
 
-      <section class="container-game">
+      <div class="score">
+        <h2 class="title-score">Score</h2>
+        <span class="counter-score" id="score">0</span>
+      </div>
+    </header>
 
-        <div class="game-zone">
+    <section class="container-game" id="container-game">
 
-          <!-- Paper -->
-          <div class="cotainer-actions">
-            <div class="outer-papel-circle">
-              <div class="inner-circle">
-                <img src="./assets/img/icon-paper.svg" />
-              </div>
+      <div class="game-zone">
+
+        <!-- Paper -->
+        <button class="cotainer-actions" id="paper">
+          <div class="outer-paper-circle">
+            <div class="inner-circle paper">
+              <img src="./assets/img/icon-paper.svg" />
             </div>
           </div>
-
-          <!-- Scissors -->
-          <div class="cotainer-actions">
-            <div class="outer-scissors-circle">
-              <div class="inner-circle">
-                <img src="./assets/img/icon-scissors.svg" />
-              </div>
+        </button>
+        <!-- Scissors -->
+        <button class="cotainer-actions" id="scissors">
+          <div class="outer-scissors-circle">
+            <div class="inner-circle">
+              <img src="./assets/img/icon-scissors.svg" />
             </div>
           </div>
+        </button>
 
+
+      </div>
+
+      <!-- Rock -->
+      <button class="cotainer-rock-actions" id="rock">
+        <div class="outer-rock-circle">
+          <div class="inner-circle">
+            <img src="./assets/img/icon-rock.svg" />
+          </div>
         </div>
+      </button>
 
-        <!-- Rock -->
-        <div class="cotainer-paper-actions">
-            <div class="outer-rock-circle">
+
+    </section>
+
+    
+    <section class="result-wrapper isHidden" id="result-wrapper">
+
+      <div class="userPicked item">
+          <h2>You picked</h2>
+          <button class="cotainer-actions" id="paper">
+            <div class="outer-paper-circle" id="outerUserCircle">
                 <div class="inner-circle">
-                    <img src="./assets/img/icon-rock.svg" />
+                    <img src="./assets/img/icon-paper.svg" id="userChoiceImg"/>
                 </div>
             </div>
-        </div>
+          </button>
+      
+      </div>
+
+      <div class="isHidden item " id="playAgain">
         
+        <h2 id="winnerTitle" class="winnerTitle"></h2>
+
+
+        <button class="buttonPlayAgain" onclick="PlayAgain()">Play Again</button>
         
+      </div>
+
+      <div class="userPicked item">
+
+      <h2 id="HousePickedTitle">House picked</h2>
+
+      <button class="cotainer-actions">
+          <div class="outer-rock-circle">
+              <div class="inner-circle">
+                  <img src="./assets/img/icon-rock.svg" id="imgMachineChoice"/>
+              </div>
+          </div>
+      </button>
+      
+      </div>
+
     </section>
 
     <div class="buttons">
-        <button class="button-rules">Rules</button>
+      <button class="button-rules" id="">Rules</button>
     </div>
-        
-    </main>
-  </body>
+
+  </main>
+
+
+
+  <script src="/assets/js/index.js" ></script>
+</body>
+
 </html>

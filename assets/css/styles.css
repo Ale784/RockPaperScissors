@@ -102,6 +102,17 @@ header .score{
     gap: 20px;
 }
 
+.result-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    flex: 1 1 0;
+    width: 0;
+  }
+
 .game-zone{
     display: flex;
     justify-content: space-between;
@@ -116,29 +127,36 @@ header .score{
     display: flex;
     justify-items: center;
     align-items: center;
-
-
+    background-color: transparent;
+    border-radius: 100%;
+    cursor: pointer;
 }
 
-.cotainer-paper-actions{
+
+.cotainer-rock-actions{
     align-self: center;
+    border-radius: 100%;
+    cursor: pointer;
 }
 
-.outer-papel-circle, .outer-scissors-circle, .outer-rock-circle, .inner-circle{
+.outer-paper-circle, .outer-scissors-circle, .outer-rock-circle, .inner-circle{
     border-radius: 100%;
     padding: 20px;
 }
 
-.outer-papel-circle{
-    background-color: blue;
+.outer-paper-circle{
+    background-color:  rgb(70, 100, 244);
+    box-shadow: rgb(42, 69, 194) 0px 6px 0px 0px
 }
 
 .outer-scissors-circle{
-    background-color: rgb(163, 163, 86);
+    background-color: rgb(235, 159, 14);
+    box-shadow: rgb(220, 170, 14) 0px 6px 0px 0px
 }
 
 .outer-rock-circle{
-    background-color: red;
+    background-color: rgb(219, 46, 77);
+    box-shadow: rgb(190, 80, 77) 0px 6px 0px 0px
 }
 
 
@@ -159,4 +177,66 @@ header .score{
     border: 1px solid white;
     border-radius: 10px;
     font-size: medium;
+}
+
+.isHidden{
+    display: none;
+}
+
+
+
+.playAgain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.playAgain > button {
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.winnerTitle{
+  font-size: x-large;
+  text-align: center;
+}
+
+.cotainer-actions:hover, .cotainer-rock-actions:hover{
+    box-shadow: 0px 0px 0px 20px rgba(255, 255, 255, 0.05);
+}
+
+h2{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.userPicked{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+button {
+    border: none;
+}
+
+
+.buttonPlayAgain{
+    padding: 10px 50px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: medium;
+}
+
+.containerPlayAgain{
+    display: flex;
+    flex-direction: column;
 }
